@@ -1,89 +1,104 @@
-/* src/App.css */
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
+  background-color: #ECDFCC;
+  color: #1E201E;
 }
 
-nav {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
+.app {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #1E201E;
+  padding: 1rem;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  color: #fff;
+.nav-link {
+  margin: 0 15px;
   text-decoration: none;
-  font-weight: bold;
+  color: #ECDFCC;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+.nav-link:hover {
+  color: #697565;
 }
 
-.container {
-  max-width: 1200px;
+.page-content {
   margin: 2rem auto;
-  padding: 0 1rem;
+  width: 90%;
+  max-width: 800px;
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  color: #333;
+  color: #1E201E;
 }
 
-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-form {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-  display: block;
-  margin-bottom: 0.5rem;
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFF;
+  border: 3px solid #3C3D37; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 form input,
 form textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #697565; 
   border-radius: 4px;
+  font-size: 1rem;
+  background-color: #ECDFCC; 
+  color: #1E201E;
 }
 
 form textarea {
-  height: 100px;
+  height: 120px;
   resize: vertical;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1E201E; /* Dark text for labels */
+}
+
+button {
+  background-color: #1E201E; /* Dark color for button */
+  color: #ECDFCC; /* Light beige text */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #3C3D37; /* Slightly lighter color on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow on hover */
 }
 
 .home {
@@ -99,75 +114,6 @@ form textarea {
   font-size: 2rem;
   color: #333;
 }
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh; /* Adjust height as needed */
-  background-color: #E1D7B7; /* Light beige background */
-  padding: 2rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  margin: 2rem auto;
-  max-width: 600px; /* Constrain width for better appearance */
-}
-
-.contact h1 {
-  margin-bottom: 1.5rem;
-  color: #1E2A5E; /* Dark blue for heading */
-  font-size: 2rem;
-}
-
-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #7C93C3; /* Light blue background for the form */
-  padding: 1.5rem;
-  border-radius: 8px;
-}
-
-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #1E2A5E; /* Dark blue for label text */
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #55679C; /* Medium blue border */
-  border-radius: 4px;
-  font-size: 1rem;
-  box-sizing: border-box; /* Ensures padding doesn’t affect width */
-}
-
-form textarea {
-  height: 120px;
-  resize: vertical; /* Allows vertical resizing */
-}
-
-button {
-  background-color: #55679C; /* Medium blue for button */
-  color: #E1D7B7; /* Light beige for button text */
-  border: none;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-button:hover {
-  background-color: #1E2A5E; /* Dark blue on hover */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow on hover */
-}
-
 
 .notfound {
   text-align: center;

@@ -1,16 +1,30 @@
-/* src/components/Counter.css */
-.counter {
-    text-align: center;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.counter h1 {
-    margin-bottom: 1rem;
-}
-
-.buttons {
-    margin-top: 1rem;
-}
+/* Counter button styles */
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: #1E201E;
+    color: #ECDFCC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #697565;
+  }
+  
+  .reset {
+    background-color: #3C3D37;
+  }
+  
+  .reset:hover {
+    background-color: #697565;
+  }
+  
